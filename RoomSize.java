@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class RoomSize here.
+ * RoomSize takes the dimensions for the room and it calculates the area.
  *
  * @author Jordan Byrne
  * @version v1.0
@@ -8,13 +8,12 @@
  */
 public class RoomSize
 {
-    // instance variables - replace the example below with your own
     private String name;
     private double length;
     private double width;
 
     /**
-     * Constructor for objects of class RoomSize
+     * Constructor for objects of class RoomSize. Assigns inputed values to name, length, and width.
      */
     public RoomSize(String inName, double inLen, double inWidth)
     {
@@ -24,7 +23,7 @@ public class RoomSize
     }
     
     /**
-     * Constructor for objects of class RoomSize
+     * Copy Constructor for objects of class RoomSize to prevent security holes.
      */
     public RoomSize(RoomSize object2)
     {
@@ -34,10 +33,9 @@ public class RoomSize
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Calcultes the area of the room based on the length and width.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    the calculated area
      */
     public double getArea()
     {
@@ -45,16 +43,16 @@ public class RoomSize
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * RoomSize toString method that displays information about the size of the room.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    String including the name, length, width, and area of the room.
      */
     public String toString()
     {
-        String str = "Name: " + name +
+        String str = "\nName: " + name +
                      "\nLength: " + length +
-                     "\nWidth: " + width;
+                     "\nWidth: " + width +
+                     "\nArea: " + getArea();
         return str;
     }
 }

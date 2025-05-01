@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class CarpetCost here.
+ * CarpetCost class calculates the total cost of the carpet for a room with inputed dimensions.
  *
  * @author Jordan Byrne
  * @version v1.0
@@ -8,12 +8,12 @@
  */
 public class CarpetCost
 {
-    // instance variables - replace the example below with your own
     private RoomSize size;
     private double costPerSqFt;
 
     /**
-     * Constructor for objects of class CarpetCost
+     * Constructor for objects of class CarpetCost. Assigns inputed variables
+     * to size and cost per square foot.
      */
     public CarpetCost(RoomSize area, double cost)
     {
@@ -22,10 +22,10 @@ public class CarpetCost
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Methpd calculates the total cost of the carpet depending on the inputed
+     * size and cost per square foot of carpet.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    the calculated final cost
      */
     public double getCost()
     {
@@ -34,16 +34,15 @@ public class CarpetCost
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * CarpetCost toString is display information about the room and the cost.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return    String containing the RoomSize toString, the cost per foot, 
+     *              and the total cost.
      */
     public String toString()
     {
-        String str = String.format(size + 
-                    "\nCost per square foot: $,.2f",costPerSqFt +
-                    "\nCost of the carpet: $,.2f",getCost());
+        String str = size + 
+                    String.format("\nCost per square foot: $%,.2f\nCost of the carpet: $%,.2f\n",costPerSqFt, getCost());
         return str;
     }
 }
