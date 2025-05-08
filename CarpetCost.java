@@ -3,7 +3,7 @@
  * CarpetCost class calculates the total cost of the carpet for a room with inputed dimensions.
  *
  * @author Jordan Byrne
- * @version v1.0
+ * @version v1.1
  * @since 4/29/25
  */
 public class CarpetCost
@@ -17,7 +17,7 @@ public class CarpetCost
      */
     public CarpetCost(RoomSize area, double cost)
     {
-        size = area;
+        size = new RoomSize(area);
         costPerSqFt = cost;
     }
 
